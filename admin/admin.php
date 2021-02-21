@@ -12,12 +12,9 @@ License: You must have a valid license purchased only from themeforest(the above
     <!-- BEGIN: Head -->
     <head>
         <meta charset="utf-8">
-        <link href="dist/images/logo.svg" rel="shortcut icon">
+        <link href="images/logo_devStore.ico" rel="shortcut icon">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Midone admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
-        <meta name="keywords" content="admin template, Midone admin template, dashboard template, flat admin template, responsive admin template, web app">
-        <meta name="author" content="LEFT4CODE">
-        <title>Dashboard - Midone - Tailwind HTML Admin Template</title>
+        <title>Painel Administrativo</title>
         <!-- BEGIN: CSS Assets-->
         <link rel="stylesheet" href="dist/css/app.css" />
         <!-- END: CSS Assets-->
@@ -28,7 +25,7 @@ License: You must have a valid license purchased only from themeforest(the above
         <div class="mobile-menu md:hidden">
             <div class="mobile-menu-bar">
                 <a href="" class="flex mr-auto">
-                    <img alt="Midone Tailwind HTML Admin Template" class="w-6" src="dist/images/logo.svg">
+                    <img alt="devStore" class="w-6" src="images/logo_devStore.webp" style="width:40px;">
                 </a>
                 <a href="javascript:;" id="mobile-menu-toggler"> <i data-feather="bar-chart-2" class="w-8 h-8 text-white transform -rotate-90"></i> </a>
             </div>
@@ -101,8 +98,8 @@ License: You must have a valid license purchased only from themeforest(the above
             <!-- BEGIN: Side Menu -->
             <nav class="side-nav">
                 <a href="" class="intro-x flex items-center pl-5 pt-4">
-                    <img alt="Midone Tailwind HTML Admin Template" class="w-6" src="dist/images/logo.svg">
-                    <span class="hidden xl:block text-white text-lg ml-3"> Mid<span class="font-medium">one</span> </span>
+                    <img alt="devStore" class="w-6" src="images/logo_devStore.webp" style="width:40px;">
+                    <span class="hidden xl:block text-white text-lg ml-3"> dev<span class="font-medium">Store</span> </span>
                 </a>
                 <div class="side-nav__devider my-6"></div>
                 <ul>
