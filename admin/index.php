@@ -1,3 +1,20 @@
+<?php
+    include('includes/conexao.php');
+    $usuario_e_senha = "";
+    $query_usuarios = mysqli_query($conexao, "select * from tb_usuarios limit 2");
+
+    if (mysqli_num_rows($query_usuarios) == 0) {
+        $insere = mysqli_query($conexao, "insert into tb_usuarios values (0, 'admin', 'admin@etec.com.br', md5('123'))");
+        $usuario_e_senha = "<strong>Usuário padrão:</strong>    admin@etec.com.br    <strong>Senha:</strong>   123";
+    }
+
+    if (mysqli_num_rows($query_usuarios) == 1) {
+        $usuario_padrao = mysqli_fetch_array($query_usuarios);
+        if ($usuario_padrao["email"] == "admin@etec.com.br") {
+            $usuario_e_senha = "<strong>Usuário padrão:</strong>    admin@etec.com.br    <strong>Senha:</strong>   123";
+        }      
+    }
+?>
 <!DOCTYPE html>
 <!--
 Template Name: Midone - HTML Admin Dashboard Template
@@ -37,6 +54,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             Acesse para gerenciar.
                         </div>
                         <div class="-intro-x mt-5 text-lg text-white">Gerencie produtos, categorias e vendas da sua loja</div>
+                        <div class="-intro-x mt-5 text-lg text-white"><?php echo $usuario_e_senha ?></div>
                     </div>
                 </div>
                 <!-- END: Login Info -->
@@ -47,9 +65,11 @@ License: You must have a valid license purchased only from themeforest(the above
                             Entrar
                         </h2>
                         <div class="intro-x mt-2 text-gray-500 xl:hidden text-center">Gerencie produtos, categorias e vendas da sua loja</div>
+                        <div class="intro-x mt-2 text-gray-500 xl:hidden text-center"><?php echo $usuario_e_senha ?></div>
+                        <form action="login.php" method="post">
                         <div class="intro-x mt-8">
-                            <input type="text" class="intro-x login__input input input--lg border border-gray-300 block" placeholder="Email">
-                            <input type="password" class="intro-x login__input input input--lg border border-gray-300 block mt-4" placeholder="Senha">
+                            <input type="text" class="intro-x login__input input input--lg border border-gray-300 block" placeholder="Email" name="email">
+                            <input type="password" class="intro-x login__input input input--lg border border-gray-300 block mt-4" placeholder="Senha" name="senha">
                         </div>
                         <div class="intro-x flex text-gray-700 text-xs sm:text-sm mt-4">
                             <div class="flex items-center mr-auto">
@@ -59,8 +79,9 @@ License: You must have a valid license purchased only from themeforest(the above
                             <a href="">Esqueceu a senha?</a> 
                         </div>
                         <div class="intro-x mt-5 xl:mt-8 text-center xl:text-left">
-                            <button class="button button--lg w-full xl:w-32 text-white bg-theme-1 xl:mr-3">Acessar</button>
+                            <button type="submit" class="button button--lg w-full xl:w-32 text-white bg-theme-1 xl:mr-3">Acessar</button>
                         </div>
+                        </form>
                     </div>
                 </div>
                 <!-- END: Login Form -->
