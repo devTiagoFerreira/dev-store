@@ -1,3 +1,9 @@
+<?php 
+    session_start();
+    if(!isset($_SESSION["logado"])) {
+        header ("location: index.php");
+    }
+?>
 <!DOCTYPE html>
 <!--
 Template Name: Midone - HTML Admin Dashboard Template
@@ -345,8 +351,8 @@ License: You must have a valid license purchased only from themeforest(the above
                         <div class="dropdown-box mt-10 absolute w-56 top-0 right-0 z-20">
                             <div class="dropdown-box__content box bg-theme-38 text-white">
                                 <div class="p-4 border-b border-theme-40">
-                                    <div class="font-medium">Angelina Jolie</div>
-                                    <div class="text-xs text-theme-41">Software Engineer</div>
+                                    <div class="font-medium"><?php echo $_SESSION["logado"]["nome"]?></div>
+                                    <div class="text-xs text-theme-41"><?php echo $_SESSION["logado"]["email"]?></div>
                                 </div>
                                 <div class="p-2">
                                     <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md"> <i data-feather="user" class="w-4 h-4 mr-2"></i> Profile </a>
@@ -355,7 +361,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md"> <i data-feather="help-circle" class="w-4 h-4 mr-2"></i> Help </a>
                                 </div>
                                 <div class="p-2 border-t border-theme-40">
-                                    <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md"> <i data-feather="toggle-right" class="w-4 h-4 mr-2"></i> Logout </a>
+                                    <a href="logout.php" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md"> <i data-feather="toggle-right" class="w-4 h-4 mr-2"></i> Logout </a>
                                 </div>
                             </div>
                         </div>
