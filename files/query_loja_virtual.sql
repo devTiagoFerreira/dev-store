@@ -83,3 +83,6 @@ create table tb_pedidos_itens(
   qtd int not null,
   valor_total decimal (10,2) not null
 );
+use loja_virtual_pw2;
+select * from tb_usuarios;
+drop table tb_usuarios;
