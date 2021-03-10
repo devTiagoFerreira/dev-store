@@ -7,6 +7,8 @@
                             <input type="text" name="nome" id="nome" class="input w-full border flex-1" placeholder="Informe a Categoria">
                        
                           </div>
+                          <input type="hidden" value="0" id="modo">
+                          <input type="hidden" value="0" id="id">
 <button class="button w-24 justify-center block bg-theme-1 text-white ml-2" id="btnCategoria">Gravar</button>
 
 <br>
@@ -22,10 +24,14 @@
 	  $("#Listar").load("categorias/listar.php");
 	  
 	 $("#btnCategoria").click(function() {
-       var categoria = $("#nome").val();
-		 $.post("categorias/salvar.php",{categoria:categoria},function(retorno){
+       var categoria = $("#nome").val(),
+		   modo = $("#modo").val(),
+		   id = $("#id").val();
+		 $.post("categorias/salvar.php",{categoria:categoria, id:id, modo:modo},function(retorno){
 			$("#Listar").load("categorias/listar.php");
 			alert(retorno); 
+			$("#modo").val(0);
+			$("#id").val(0);
 			$("#nome").val("");
 			$("#nome").focus();
 		 });
