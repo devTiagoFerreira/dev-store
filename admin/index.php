@@ -77,7 +77,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             Entrar
                         </h2>
                         
-                         <form method="post" action="?acao=Logar">
+                         <form method="post" action="?acao=Logar" >
                         <div class="intro-x mt-8">
                             <input type="text" class="intro-x login__input input input--lg border border-gray-300 block" placeholder="Email" id="email" name="email">
                             <input type="password" class="intro-x login__input input input--lg border border-gray-300 block mt-4" placeholder="Senha" id="senha" name="senha">

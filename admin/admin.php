@@ -139,19 +139,19 @@ License: You must have a valid license purchased only from themeforest(the above
                         </a>
                         <ul class="">
                             <li>
-                                <a href="?pg=Categorias" class="side-menu">
+                                <a href="?pg=categorias" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title"> Categorias </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="?pg=Subcategorias" class="side-menu">
+                                <a href="?pg=subcategorias" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title"> Subcategorias </div>
                                 </a>
                             </li>
                              <li>
-                                <a href="?pg=Produtos" class="side-menu">
+                                <a href="?pg=produtos" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title"> Produtos </div>
                                 </a>
@@ -399,8 +399,9 @@ License: You must have a valid license purchased only from themeforest(the above
 						  if (isset($_GET["pg"])){
 							  
 							  switch ($_GET["pg"]){
-								case "Categorias"    : $incluir = "categorias/index.php"; break;
-								case "Subcategorias" : $incluir = "subcategorias/index.php"; break;
+								case "categorias"    : $incluir = "categorias/index.php"; break;
+								case "subcategorias" : $incluir = "subcategorias/index.php"; break;
+                                case "produtos" : $incluir = "produtos/index.php"; break;
 								default : $incluir = "inicio.php";
 							  }
 							  include "$incluir";
