@@ -1,0 +1,136 @@
+.container-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.541);
+}
+
+.container-produto {
+    padding: 0 0 10px 0;
+    margin: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+    text-align: center;
+    width: 50%;
+    min-width: 500px;
+}
+
+.produto {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.produto img {
+    width: 40%;
+}
+
+.produto .desc-produto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60%;
+    align-items: center;
+    padding: 10px 0 0 0;
+}
+
+.produto .desc-produto .titulo {
+    margin-top: 15px;
+    font-size: 35px;
+}
+
+.produto .desc-produto .preco {
+    font-size: 50px;
+    color: rgb(62, 220, 96);
+}
+
+.produto .desc-produto .add {
+    width: 250px;
+    height: 60px;
+    border: none;
+    background-color: #2a55e2;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.produto .desc-produto .add:hover {
+    background-color: #4a6de1;
+    color: white;
+    cursor: pointer;
+}
+
+.produto .desc-produto .quant {
+    display: flex;
+    justify-content: center;
+}
+
+.produto .desc-produto .quant button {
+    background-color: transparent;
+    border: none;
+}
+
+.produto .desc-produto .quant .sub {
+    color: rgb(241, 60, 60);
+}
+
+.produto .desc-produto .quant .adc {
+    color: rgb(62, 220, 96);
+}
+
+.produto .desc-produto .quant ion-icon {
+    font-size: 50px;
+}
+
+.produto .desc-produto .quant #numero {
+    font-size: 50px;
+    width: 60px;
+    text-align: center;
+}
+
+.outros-titulo {
+    margin: 50px 0 20px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.outros-produtos {
+    display: flex;
+    flex: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    text-align: center;
+}
+
+.outros-produtos img {
+    width: 15%;
+}
+
+form .modal-footer { 
+    border-top: none;
+    margin-top: 20px;
+}
+
+form div {
+    display: flex;
+    justify-content: center;
+}
+
+form div .voltar {
+    margin: auto;
+    width: 250px;
+    height: 60px;
+    border: none;
+    background-color: rgb(255, 67, 67);
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+form div .voltar:hover {
+    background-color: rgb(255, 98, 98);
+    color: white;
+    cursor: pointer;
+}

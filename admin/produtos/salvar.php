@@ -1,29 +1,31 @@
 <?php
-include("../includes/conexao.php");
-$nome       = $_POST["nome"];
-$descricao     = $_POST["descricao"];
-$preco = $_POST["preco"];
-$quant = $_POST["quant"];
-$id        = $_POST["id"];
-$modo      = $_POST["modo"];
-$subcategoria = $_POST["subcategoria"];
+  include("../includes/conexao.php");
+  $id           = $_POST["id"];
+  $modo         = $_POST["modo"];
+  $subcategoria = $_POST["subcategoria"];
+  $produto      = $_POST["nome"];
+  $valor        = $_POST["valor"];
+  $estoque      = $_POST["estoque"];
+  if ($_POST["ativo"] == 'true'){
+	  $ativo        = 1;
+  }else{
+	  $ativo        = 0;
+  }
+ 
 
-if ($subcategoria != 0) {
-	if ($modo == 0) {
-		$inserir = mysqli_query($conexao, "insert into tb_produtos values (0, '$subcategoria', '$nome', '$descricao', '$quant', '$preco', default)");
-		if ($inserir) {
-			echo "Produto gravado com sucesso!";
-		} else {
-			echo "Falha ao tentar gravar produto";
-		}
-	} else {
-		$alterar = mysqli_query($conexao, "update tb_produtos set nome = '$nome', descricao = '$descricao', estoque = '$quant', valor = '$preco' where id = '$id'");
-		if ($alterar) {
-			echo "Produto atualizado com sucesso!";
-		} else {
-			echo "Falha ao tentar atualizar produto";
-		}
-	}
-} else {
-	echo "Selecione um subcategoria!";
-}
+  if ($modo == 0){
+	  $inserir = mysqli_query($conexao,"insert into tb_produtos VALUES (0, '$subcategoria', '$produto','$estoque','$valor', '$ativo')")or die(mysqli_error($conexao));
+	  if ($inserir){
+		 echo "Produto Gravado com sucesso!" ; 
+	  }else{
+		  echo "Falha ao tentar gravar Produto";
+	  }
+  }else{
+	  $alterar = mysqli_query($conexao,"update tb_produtos SET id_subcategoria = '$subcategoria', nome = '$produto', estoque = '$estoque', valor = '$valor', ativo = '$ativo' where id = '$id'");
+	  if ($alterar){
+		 echo "Produto Atualizado com sucesso!" ; 
+	  }else{
+		  echo "Falha ao tentar atualizar o Produto";
+	  }
+  }
+?>

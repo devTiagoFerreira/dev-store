@@ -1,9 +1,11 @@
 <?php
   $id = $_POST["id"];
   include("../includes/conexao.php");
-  $excluir = mysqli_query($conexao, "update tb_produtos set ativo = false where id = '$id'");
+  $excluir = mysqli_query($conexao, "delete from tb_produtos where id = '$id'");
   if ($excluir){
-	 echo "Resgistro removido com sucesso!";  
+	 echo "Registro removido com sucesso!";  
   }else{
 	  echo "Falha!";
   }
+ 
+?>

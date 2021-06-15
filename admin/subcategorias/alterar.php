@@ -5,3 +5,5 @@
   $resultado = mysqli_fetch_array($alterar);
   extract($resultado);
   echo json_encode($resultado);
+
+?>

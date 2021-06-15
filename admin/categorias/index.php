@@ -27,6 +27,12 @@
        var categoria = $("#nome").val(),
 		   modo = $("#modo").val(),
 		   id = $("#id").val();
+		 
+		  if ($.trim(categoria)==''){
+			alert('Informe a Categoria');
+			$("#nome").focus();
+			return false;
+		  }
 		 $.post("categorias/salvar.php",{categoria:categoria, id:id, modo:modo},function(retorno){
 			$("#Listar").load("categorias/listar.php");
 			alert(retorno); 

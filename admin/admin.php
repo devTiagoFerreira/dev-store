@@ -27,6 +27,7 @@ License: You must have a valid license purchased only from themeforest(the above
         <!-- BEGIN: CSS Assets-->
         <link rel="stylesheet" href="dist/css/app.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+         
         <!-- END: CSS Assets-->
         
        
@@ -66,7 +67,7 @@ License: You must have a valid license purchased only from themeforest(the above
                         <li>
                             <a href="side-menu-crud-form.html" class="menu">
                                 <div class="menu__icon"> <i data-feather="activity"></i> </div>
-                                <div class="menu__title"> Subcategorias </div>
+                                <div class="menu__title"> SubCategorias </div>
                             </a>
                         </li>
                         <li>
@@ -100,7 +101,7 @@ License: You must have a valid license purchased only from themeforest(the above
                     </a>
                     <ul class="">
                         <li>
-                            <a href="side-menu-profile-overview-1.html" class="menu">
+                            <a href="?pg=Usuarios" class="menu">
                                 <div class="menu__icon"> <i data-feather="activity"></i> </div>
                                 <div class="menu__title"> Gerenciamento</div>
                             </a>
@@ -139,19 +140,19 @@ License: You must have a valid license purchased only from themeforest(the above
                         </a>
                         <ul class="">
                             <li>
-                                <a href="?pg=categorias" class="side-menu">
+                                <a href="?pg=Categorias" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title"> Categorias </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="?pg=subcategorias" class="side-menu">
+                                <a href="?pg=SubCategorias" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
-                                    <div class="side-menu__title"> Subcategorias </div>
+                                    <div class="side-menu__title"> SubCategorias </div>
                                 </a>
                             </li>
                              <li>
-                                <a href="?pg=produtos" class="side-menu">
+                                <a href="?pg=Produtos" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title"> Produtos </div>
                                 </a>
@@ -165,7 +166,7 @@ License: You must have a valid license purchased only from themeforest(the above
                         </a>
                         <ul class="">
                             <li>
-                                <a href="side-menu-users-layout-1.html" class="side-menu">
+                                <a href="?pg=Usuarios" class="side-menu">
                                     <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                     <div class="side-menu__title"> Gerenciamento </div>
                                 </a>
@@ -399,9 +400,10 @@ License: You must have a valid license purchased only from themeforest(the above
 						  if (isset($_GET["pg"])){
 							  
 							  switch ($_GET["pg"]){
-								case "categorias"    : $incluir = "categorias/index.php"; break;
-								case "subcategorias" : $incluir = "subcategorias/index.php"; break;
-                                case "produtos" : $incluir = "produtos/index.php"; break;
+								case "Categorias"    : $incluir = "categorias/index.php"; break;
+								case "SubCategorias" : $incluir = "subcategorias/index.php"; break;
+								case "Produtos"      : $incluir = "produtos/index.php"; break;
+								case "Usuarios"      : $incluir = "usuarios/index.php"; break;
 								default : $incluir = "inicio.php";
 							  }
 							  include "$incluir";
@@ -422,6 +424,8 @@ License: You must have a valid license purchased only from themeforest(the above
         <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
        
         <script src="dist/js/app.js"></script>
+        
+         
         
         <!-- END: JS Assets-->
     </body>
